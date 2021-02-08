@@ -1,0 +1,11 @@
+{%- if site.analytics.google.tracking_id -%}
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-BPKDDQKT20"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'G-BPKDDQKT20');
+	</script>
+{%- endif -%}
