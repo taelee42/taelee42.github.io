@@ -1,12 +1,7 @@
 ---
-title: 어쩌구저쩌구
-author: taelee
-categories:
- - blog
-tags:
- - iOS
- - tag test
-last_modified_at: 2021-02-08
+title: 포스트 템플릿
+tags: [iOS, tag test]
+date: 2021-02-07 12:01:24
 
 ---
 
