@@ -1,6 +1,6 @@
 ---
-title: FileManager, Swift로 파일 읽고 쓰기
-tags: [swift, FileManager]
+title: FileManager로 Swift에서 파일 읽고 쓰기
+tags: [Swift, FileManager]
 date: 2020-02-10 02:30:00
 
 ---
