@@ -25,7 +25,7 @@ date: 2020-02-10 02:30:00
 
 ## 🦊 1 FileManager 불러오기
 
-파일을 다루기 위해서는 FileManager를 사용해야합니다.
+FileManager : 파일을 다루기 위한 클래스, 인스턴스화해서 사용
 
 ```swift
 import Foundation
@@ -33,9 +33,8 @@ import Foundation
 
 let fileManager = FileManager.default
 ```
-- FileManager를 사용하려면 Foundation이나 UIKit 라이브러리를 import해야 합니다.
-  - 정확히는 FileManager가 Foundation에 있는데 UIKit을 import하면 Foundation도 불러와진다고 하네요.
-  (공식문서에는 안적혀 있어서 확실한지는 모르겠습니다.)
+- FileManager를 사용하려면 Foundation이나 UIKit import하기
+  - 정확히는 Foundation을 불러오면 되는데 UIKit을 불러오면 Foundation도 같이 불러온다고 합니다.(공식문서에는 못찾았습니다.)
   - [FileManager 공식문서](https://developer.apple.com/documentation/foundation/filemanager)
   - [UIKit 공식문서](https://developer.apple.com/documentation/uikit)
   - [Foundation 공식문서](https://developer.apple.com/documentation/foundation#//apple_ref/doc/uid/20001091)
@@ -47,6 +46,7 @@ let fileManager = FileManager.default
 - 여기서 불러온 fileManager는 아래에서 계속 사용됩니다.
 
 ## 🦊 2 경로 지정하기
+
 ```swift
 let documentURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
 ```
