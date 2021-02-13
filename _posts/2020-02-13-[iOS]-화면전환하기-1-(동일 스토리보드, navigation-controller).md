@@ -45,6 +45,8 @@ tags: [iOS, navigation controller]
 
 ## 2) 버튼에 파란화면 연결하기
 
+- ctrl키를 누르면서 버튼을 클릭후 파란화면까지 드래그 해줍니다.
+
 <img data-action="zoom" src='{{ "/assets/images/2020-02-13/3.gif" | relative_url }}' alt='absolute'>
 
 
