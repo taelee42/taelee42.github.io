@@ -1,5 +1,5 @@
 ---
-title: iOS | 화면전환하기2 (다른 스토리보드, navigtaion controller)(작성중)
+title: iOS | 화면전환하기2 (다른 스토리보드, navigtaion controller)
 tags: [iOS, navigation controller]
 
 ---
