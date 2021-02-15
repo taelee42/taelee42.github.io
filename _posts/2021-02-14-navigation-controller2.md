@@ -71,7 +71,7 @@ tags: [iOS, navigation controller]
 
 - 버튼 배경색, 글자색, 글자 크기등을 설정합니다.
 
-<img data-action="zoom" src='{{ "/assets/images/2020-02-14/5.gif" | relative_url }}' width=500 alt='absolute'>
+<img data-action="zoom" src='{{ "/assets/images/2020-02-14/img7.png" | relative_url }}' width=500 alt='absolute'>
 
 - 버튼의 가로와 세로를 정해줍니다.  왼쪽패널에서 컨트롤르 누른책 버튼을 클릭하고 다시 버튼에 내려두면 Width와 Height를 설정할 수 있습니다. (shift를 누르면 여러개를 선택할 수 있어요)
   - width는 300, height는 70으로 설정했습니다.
@@ -135,6 +135,7 @@ tags: [iOS, navigation controller]
 <img data-action="zoom" src='{{ "/assets/images/2020-02-14/img5.png" | relative_url }}' width=200 alt='absolute'>
 
 3. present로 연결된 화면을 띄웁니다. 
+
 <img data-action="zoom" src='{{ "/assets/images/2020-02-14/12.gif" | relative_url }}' width=300 alt='absolute'>
 
 아주 잘 실행되지만 되돌아가지를 못합니다. 되돌아 가는 코드를 만들어줍니다.
@@ -179,7 +180,8 @@ present가 아닌 navigationController의 push를 사용하여 secondVC화면을
 ```
 위에서 쌓아놓은(push) 화면을 pop으로 업애버립니다.
 
-[깃헙에서 수정된 코드 확인하기](https://github.com/taelee42/swift-experiments/commit/2268c1d56eeb550e0b78a8eafa8043f43aac0261)
+
+[깃헙에서 수정된 코드 확인하기(클릭 후 밑의 2파일만 보면 됩니다)](https://github.com/taelee42/swift-experiments/commit/2268c1d56eeb550e0b78a8eafa8043f43aac0261)
 
 완성
 
