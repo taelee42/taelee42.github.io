@@ -3,4 +3,15 @@ code {
   font-size: 1.0rem;
   line-height: 1.5;
 }
+
+ul.toc--ellipsis {
+  & > li {
+    white-space: normal;
+  }
+}
+
+ul.toc .toc-h2, ul.toc .toc-h2 a, ul.toc .toc-h3, ul.toc .toc-h3 a, ul.toc .toc-h4, ul.toc .toc-h4 a, ul.toc .toc-h5, ul.toc .toc-h5 a, ul.toc .toc-h6, ul.toc .toc-h6 a {
+    font-size: 0.8rem;
+}
+
 /* end custom scss snippet */
