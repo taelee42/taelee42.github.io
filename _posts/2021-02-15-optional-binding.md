@@ -1,5 +1,5 @@
 ---
-title: swift | Optional 추출 방법
+title: Swift | Optional 추출 방법
 tags: [swift, optional]
 date: 2021-02-15 23:05:00 +09:00
 
