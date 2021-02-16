@@ -42,17 +42,19 @@ tags: [iOS, navigation controller]
 
 - 먼저 cmd + shift + L 을 눌러서 view controller를 가져와줍니다.
 
-<img data-action="zoom" src='{{ "/assets/images/2020-02-14/2.gif" | relative_url }}' width=500 alt='absolute'>
+<img data-action="zoom" src='{{ "/assets/images/2020-02-14/2.gif" | relative_url }}' alt='absolute'>
 
 
 - 스토리보드와 SecondViewController.swift를 연결해줍니다.
   뷰컨트롤러 파일이 제대로 생성되어 있다면 몇글자만 쳐도 자동완성이 됩니다.
   
+
 <img data-action="zoom" src='{{ "/assets/images/2020-02-14/f.png" | relative_url }}' width=500 alt='absolute'>
 
 - 스토리보드 ID도 정해줍니다.(Second라는 이름이 너무 여러곳에서 쓰이기 때문에 구분을 위해 SecondSB라고 정해줬습니다.)
   - 이 이름은 추후에 첫번째 스토리보드에서 두번재 스토리보드를 찾을때 사용됩니다.
   
+
 <img data-action="zoom" src='{{ "/assets/images/2020-02-14/g.png" | relative_url }}' width=500 alt='absolute'>
 
 
@@ -66,26 +68,26 @@ tags: [iOS, navigation controller]
 
 - 버튼의 내용을 바꿉니다.
   - 오타가 있습니다. Go To 1st Screen으로 해주세요
-<img data-action="zoom" src='{{ "/assets/images/2020-02-14/4.gif" | relative_url }}' width=500 alt='absolute'>
+<img data-action="zoom" src='{{ "/assets/images/2020-02-14/4.gif" | relative_url }}' alt='absolute'>
 
 
 - 버튼 배경색, 글자색, 글자 크기등을 설정합니다.
 
-<img data-action="zoom" src='{{ "/assets/images/2020-02-14/img7.png" | relative_url }}' width=500 alt='absolute'>
+<img data-action="zoom" src='{{ "/assets/images/2020-02-14/img7.png" | relative_url }}'  alt='absolute'>
 
 - 버튼의 가로와 세로를 정해줍니다.  왼쪽패널에서 컨트롤르 누른책 버튼을 클릭하고 다시 버튼에 내려두면 Width와 Height를 설정할 수 있습니다. (shift를 누르면 여러개를 선택할 수 있어요)
   - width는 300, height는 70으로 설정했습니다.
 
-<img data-action="zoom" src='{{ "/assets/images/2020-02-14/6.gif" | relative_url }}' width=500 alt='absolute'>
+<img data-action="zoom" src='{{ "/assets/images/2020-02-14/6.gif" | relative_url }}' alt='absolute'>
 
 - 오토레이아웃을 설정합니다. 버튼에 CTRL을 누른책 클릭하여 View에 끌어다 놓습니다.
   - Center Horizontally in Safe Area와 Center Vertically in Safe Area 를 선택합니다.
   - 역시 shift를 클릭하면 여러개를 선택할 수 있습니다.
-<img data-action="zoom" src='{{ "/assets/images/2020-02-14/7.gif" | relative_url }}' width=500 alt='absolute'>
+<img data-action="zoom" src='{{ "/assets/images/2020-02-14/7.gif" | relative_url }}' alt='absolute'>
 
 - 배경색은 뷰를 클릭하고 아래 부분에서 지정합니다.
 
-<img data-action="zoom" src='{{ "/assets/images/2020-02-14/3.gif" | relative_url }}' width=500 alt='absolute'>
+<img data-action="zoom" src='{{ "/assets/images/2020-02-14/3.gif" | relative_url }}' alt='absolute'>
 
 - Main storyboard에 있는 뷰컨트롤도 마찬가지로 꾸며줍니다.
 - 결과물 (빨간배경 -> Main, 파란 배경 -> Second)
@@ -127,13 +129,9 @@ tags: [iOS, navigation controller]
 }
 ```
 1. 어떤 스토리보드에서 가져올지 정합니다. `name: "Second"` 이 부분에 스토리보드 이름을 적습니다.
-
 <img data-action="zoom" src='{{ "/assets/images/2020-02-14/img4.png" | relative_url }}' width=200 alt='absolute'>
-
 2. 스토리보드에서 어던 뷰컨트롤러를 가져올지 정합니다. 아까 정해두었던 "SecondSB"를 적어놓습니다. 
-
 <img data-action="zoom" src='{{ "/assets/images/2020-02-14/img5.png" | relative_url }}' width=200 alt='absolute'>
-
 3. present로 연결된 화면을 띄웁니다. 
 
 <img data-action="zoom" src='{{ "/assets/images/2020-02-14/12.gif" | relative_url }}' width=300 alt='absolute'>
@@ -142,7 +140,7 @@ tags: [iOS, navigation controller]
 
 - SecondViewController.swift에도 위와같은 방식으로 UI버튼과 버튼의 동작(함수)를 뷰컨트롤러에 넣어줍니다.
 
-<img data-action="zoom" src='{{ "/assets/images/2020-02-14/img6.png" | relative_url }}' width=500 alt='absolute'>
+<img data-action="zoom" src='{{ "/assets/images/2020-02-14/img6.png" | relative_url }}' alt='absolute'>
 
 ```swift
 @IBAction func goToFirstScreen(_ sender: Any) {
