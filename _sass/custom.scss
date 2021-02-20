@@ -14,4 +14,10 @@ ul.toc .toc-h2, ul.toc .toc-h2 a, ul.toc .toc-h3, ul.toc .toc-h3 a, ul.toc .toc-
     font-size: 0.8rem;
 }
 
+.article__content blockquote {
+  /*border-left: 5px solid #FF0000;*/
+  font-size: 1.0rem;
+  line-height: 1.5;
+}
+
 /* end custom scss snippet */
