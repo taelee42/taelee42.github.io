@@ -1,0 +1,15 @@
+---
+title: Swift | Closure란 무엇인가?
+tags: [iOS, swift, closure]
+date: 2021-02-16 14:11:00 +09:00
+
+---
+
+Closure가 무엇이고 어떻게 사용하는지 알아보도록 하겠습니다.
+
+<!--more-->
+---
+
+//색상, 폰트사이즈 설정
+<span style="color:red; font-size: 2rem" >UICollectionViewDataSource</span>
+
