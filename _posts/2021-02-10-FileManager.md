@@ -2,7 +2,7 @@
 title: iOS | FileManager로 Swift에서 파일 읽고 쓰기
 tags: [Swift, FileManager]
 date: 2021-02-10 02:30:00
-categories: [test, iOS]
+categories: [iOS]
 ---
 
 > 👉 swift에서 파일을 읽고 쓰는 등의 작업을 하기 위한 방법을 알아봅니다.

@@ -1,7 +1,7 @@
 ---
 title: iOS | 화면전환하기2 (다른 스토리보드, navigtaion controller)
 tags: [iOS, navigation controller]
-
+categories: [iOS]
 ---
 
 이전 포스트에서 **동일 스토리보드**에서 화면전환하는 법을 해봤고 이 포스트에서는 스토리보드를 나눠서 화면전환하는 법을 진행하겠습니다.
@@ -29,7 +29,7 @@ tags: [iOS, navigation controller]
 
 <img data-action="zoom" src='{{ "/assets/images/2020-02-14/d.png" | relative_url }}' width=200 alt='absolute'>
 
-요렇게 파일2개가 추가된것을 볼 수 있습니다. 
+요렇게 파일2개가 추가된것을 볼 수 있습니다.
 파일 구조가 파악되기 쉽게 하기 위해 그룹화를 진행하겠습니다.
 
 <img data-action="zoom" src='{{ "/assets/images/2020-02-14/1.gif" | relative_url }}' width=200 alt='absolute'>
@@ -47,13 +47,13 @@ tags: [iOS, navigation controller]
 
 - 스토리보드와 SecondViewController.swift를 연결해줍니다.
   뷰컨트롤러 파일이 제대로 생성되어 있다면 몇글자만 쳐도 자동완성이 됩니다.
-  
+
 
 <img data-action="zoom" src='{{ "/assets/images/2020-02-14/f.png" | relative_url }}' width=500 alt='absolute'>
 
 - 스토리보드 ID도 정해줍니다.(Second라는 이름이 너무 여러곳에서 쓰이기 때문에 구분을 위해 SecondSB라고 정해줬습니다.)
   - 이 이름은 추후에 첫번째 스토리보드에서 두번재 스토리보드를 찾을때 사용됩니다.
-  
+
 
 <img data-action="zoom" src='{{ "/assets/images/2020-02-14/g.png" | relative_url }}' width=500 alt='absolute'>
 
@@ -61,10 +61,10 @@ tags: [iOS, navigation controller]
 
 ## 3. 2개의 스토리보드에 버튼을 만들고 배경, 버튼색 넣기
 
-- 첫번째 스토리보드의 뷰 컨트롤러와 두번째 스토리보드의 뷰 컨트롤러 둘다 버튼을 만들어주고 배경색을 지정해주었습니다. 
+- 첫번째 스토리보드의 뷰 컨트롤러와 두번째 스토리보드의 뷰 컨트롤러 둘다 버튼을 만들어주고 배경색을 지정해주었습니다.
 
 - 위에서 만들었던 두번째 스토리보드부터 작업하겠습니다.(Second.storyboard)
-- 버튼은 cmd + Shift + L을 눌러서 button을 가져옵니다. 
+- 버튼은 cmd + Shift + L을 눌러서 button을 가져옵니다.
 
 - 버튼의 내용을 바꿉니다.
   - 오타가 있습니다. Go To 1st Screen으로 해주세요
@@ -125,14 +125,14 @@ tags: [iOS, navigation controller]
     guard let second = secondStoryboard.instantiateViewController(identifier: "SecondSB") as? SecondViewController else {return}
     //3
     present(nextVC, animated: true, completion: nil)
- 
+
 }
 ```
 1. 어떤 스토리보드에서 가져올지 정합니다. `name: "Second"` 이 부분에 스토리보드 이름을 적습니다.
 <img data-action="zoom" src='{{ "/assets/images/2020-02-14/img4.png" | relative_url }}' width=200 alt='absolute'>
-2. 스토리보드에서 어던 뷰컨트롤러를 가져올지 정합니다. 아까 정해두었던 "SecondSB"를 적어놓습니다. 
+2. 스토리보드에서 어던 뷰컨트롤러를 가져올지 정합니다. 아까 정해두었던 "SecondSB"를 적어놓습니다.
 <img data-action="zoom" src='{{ "/assets/images/2020-02-14/img5.png" | relative_url }}' width=200 alt='absolute'>
-3. present로 연결된 화면을 띄웁니다. 
+3. present로 연결된 화면을 띄웁니다.
 
 <img data-action="zoom" src='{{ "/assets/images/2020-02-14/12.gif" | relative_url }}' width=300 alt='absolute'>
 

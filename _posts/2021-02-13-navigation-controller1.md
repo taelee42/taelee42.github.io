@@ -1,12 +1,12 @@
 ---
 title: iOS | 화면전환하기1 (동일 스토리보드, navigtaion controller)
 tags: [iOS, navigation controller]
-
+categories: [iOS]
 ---
 
 화면을 전환하는 방법을 알아보겠습니다.
 
-먼저 **같은 스토리보드** 내에서 화면을 전환하는 방법을 알아보고 
+먼저 **같은 스토리보드** 내에서 화면을 전환하는 방법을 알아보고
 **다른 스토리보드**에 있는 두 화면을 전환하는 방법도 해보려고 합니다.
 
 같은 스토리보드에서 작업 하는게 편하고 간단하지만 스토리보드를 나누면 협업시 **충돌이 적어지고 코드의 구조를 파악하기 쉽다는 장점**이 있습니다.
@@ -101,7 +101,7 @@ tags: [iOS, navigation controller]
 ### 방법1) storyboard에서 직접 바꾸기
 
 
-<img data-action="zoom" src='{{ "/assets/images/2020-02-13/10.gif" | relative_url }}' 
+<img data-action="zoom" src='{{ "/assets/images/2020-02-13/10.gif" | relative_url }}'
 alt='absolute'>
 
 
@@ -128,7 +128,7 @@ class ViewController: UIViewController {
 위 부분을 흰색으로 바꿔줬습니다.
 
 ## 6) 완성
-<img data-action="zoom" src='{{ "/assets/images/2020-02-13/11.gif" | relative_url }}' 
+<img data-action="zoom" src='{{ "/assets/images/2020-02-13/11.gif" | relative_url }}'
  width=300 alt='absolute'>
 
 

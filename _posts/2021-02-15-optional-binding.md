@@ -2,7 +2,7 @@
 title: Swift | Optional 추출 방법
 tags: [swift, optional]
 date: 2021-02-15 23:05:00 +09:00
-
+categories: [Swift]
 
 ---
 
@@ -59,11 +59,11 @@ if let newName = name {
     print("Failed to Unwrapping")
 }
 
-// 결과 
+// 결과
 // "IronMan" 출력
 ```
-옵셔널 타입인 name을 newName으로 값을 접근해서 추출합니다. 
-이때 nil이 아니면 바로 밑에 `print(newName)`로 넘어가고 
+옵셔널 타입인 name을 newName으로 값을 접근해서 추출합니다.
+이때 nil이 아니면 바로 밑에 `print(newName)`로 넘어가고
 nil인 경우는 else 구문으로 넘어갑니다.
 
 이때 옵셔널 값의 접근한 변수 newName의 타입은 String으로 옵셔널이 아니게 됩니다.

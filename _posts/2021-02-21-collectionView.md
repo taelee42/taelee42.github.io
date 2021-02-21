@@ -2,7 +2,7 @@
 title: iOS | Collection View의 Protocol들(DataSource, Delegate, DelegateFlowLayout)
 tags: [iOS, collection view, protocol]
 date: 2021-02-21 05:37:24 +09:00
-
+categories: [iOS]
 ---
 
 컬렉션 뷰를 생성하고 여러 프로토콜을 통해 컬렉션 뷰의 동작이나 모양을 바꿀 수 있습니다.
@@ -13,17 +13,17 @@ date: 2021-02-21 05:37:24 +09:00
 
 
 ## 1. 프로토콜 요약
->제가 다뤘던 주요 프로토콜은 다음과 같습니다.  
+>제가 다뤘던 주요 프로토콜은 다음과 같습니다.
 추후에 중요하다고 생각되는 프로토콜이나 메서드를 다루면 추가하도록 하겠습니다.
 
 
-- UICollectionViewDataSource  
+- UICollectionViewDataSource
 셀이 담을 내용과 관련되어 있습니다. (몇개의 셀을 보여줄지, 섹션을 몇개 보여줄지)
 
-- UICollectionViewDelegate  
+- UICollectionViewDelegate
 셀의 동작관 관련되어 있습니다.(셀 선택, Context Menu, Action Menu등이 실행되었을 때 어떻게 동잘할지)
 
-- UICollectionViewDelegateFlowLayout:  
+- UICollectionViewDelegateFlowLayout:
 셀의 외관과 관련되어 있습니다. (셀 혹은 섹션의 크기나 여백등을 어떻게 표시할지)
 
 위의 프로토콜 중 꼭 구현해야하는 메서드를 갖고 있는 프로토콜은 UICollectionViewDataSource의 2개뿐입니다.
@@ -70,14 +70,14 @@ func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath:
 //해당 셀을 새로운 위치로 이동
 func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath)
 
-//컬렉션뷰에 모든 셀들의 타이틀 추출 
+//컬렉션뷰에 모든 셀들의 타이틀 추출
 func indexTitles(for collectionView: UICollectionView) -> [String]?
 
 //위에서 알게된 타이틀 이름으로 해당 셀이 몇번째 셀인지 물어보기
 func collectionView(_ collectionView: UICollectionView, indexPathForIndexTitle title: String, at index: Int) -> IndexPath
 ```
 
-  
+
 <br/>
 
 <span style="color:#FF6868; font-size: 1.5rem" >Delegate 프로토콜</span>
@@ -104,8 +104,8 @@ func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPat
 - 셀이 수정가능한지
 - 두 손가락으로 동시의 여러셀을 선택할 수 있는지
 
-> hightlight, select 모두 셀에 터치를 했을 때의 상태변화입니다.  
-hightlight: 터치가 시작되자마자  
+> hightlight, select 모두 셀에 터치를 했을 때의 상태변화입니다.
+hightlight: 터치가 시작되자마자
 select: 터치가 끝난 후
 
 <br/>
