@@ -115,11 +115,13 @@ Repository를 clone받고 실수로 자신의 브랜치로 바꾸지 않고 작�
 
 - reset 전
 
-<img data-action="zoom" src='{{ "/assets/images/2020-02-23/img4.png" | relative_url }}' width=500 alt='absolute'>
+<img data-action="zoom" src='{{ "/assets/images/2020-02-23/img2.png" | relative_url }}' width=500 alt='absolute'>
 
 - reset 후
 
-<img data-action="zoom" src='{{ "/assets/images/2020-02-23/img2.png" | relative_url }}' width=500 alt='absolute'>
+<img data-action="zoom" src='{{ "/assets/images/2020-02-23/img4.png" | relative_url }}' width=500 alt='absolute'>
+
+
 
 ---
 틀린 정보가 있다면 댓글로 알려주세요!
