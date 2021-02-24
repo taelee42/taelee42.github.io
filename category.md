@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: page
 titles:
   # @start locale config
   en      : &EN       Category
@@ -24,7 +24,7 @@ key: page-category
     <a name="{{ category_name | slugize }}"></a>
     {% for post in site.categories[category_name] %}
     <article class="archive-item">
-      <p style="line-height:1rem">
+      <p style="line-height:1.5rem">
         <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
         <span style="font-size: 1rem; font-weight:normal">{{post.date | date: "%b %d %Y"}}</span>
       </p>
