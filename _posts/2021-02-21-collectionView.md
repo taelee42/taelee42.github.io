@@ -31,6 +31,8 @@ categories: [iOS]
 
 ## 2. 필수 메서드
 
+
+
 <span style="color:#FF6868; font-size: 1.5rem" >DataSource 프로토콜</span>
 
 
@@ -42,28 +44,20 @@ func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection s
 func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
 ```
 
+DataSource 프로토콜 이외에는 필수로 구현해야 하는 메서드가 없습니다.
+
 ## 3. 선택 메서드
 
 <span style="color:#FF6868; font-size: 1.5rem" >DataSource 프로토콜</span>
 
-#### 사용해본 것
 
 ```swift
 //섹션의 갯수를 몇개로 할까? (기본값 1개)
 func numberOfSections(in collectionView: UICollectionView) -> Int
 
-// The view that is returned must be retrieved from a call to -dequeueReusableSupplementaryViewOfKind:withReuseIdentifier:forIndexPath:
 // 헤더나 푸터에 사용되는 supplementaryElement를 어떻게 보여줄까?
 func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
 
-```
-
-#### 그외 사용해보지 않은 것
-> 사용해보지 않아 Quick Help에 있는 내용만 보고 작성했습니다. \
-공부용으로 작성된 내용이라 내용이 틀릴 수도 있습니다. \
-잘못된 정보가 있다면 댓글로 알려주세요!
-
-```swift
 //해당 셀이 이동될 수 있을까?
 func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool
 
@@ -82,16 +76,16 @@ func collectionView(_ collectionView: UICollectionView, indexPathForIndexTitle t
 
 <span style="color:#FF6868; font-size: 1.5rem" >Delegate 프로토콜</span>
 
+너무 많아서 (32개) 사용해본 것 이외에는 요약해서 적겠습니다.
+
 #### 사용해본 것
+
 ```swift
 //셀이 select되었을때 어떻게 할까?
 func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
 ```
 
-
 #### 그외 사용해보지 않은 것
-
-너무 많아서 (32개) 어떤 기능과 관련되어 있는지 요약해서 적겠습니다.
 
 - 셀이 hightlight되거나 해제됐을 때 알려주기
 - 셀이 select되거나 해제됐을 때 알려주기
@@ -108,20 +102,84 @@ func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPat
 hightlight: 터치가 시작되자마자
 select: 터치가 끝난 후
 
+- 목록
+
+```swift
+func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool
+
+func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath)
+
+func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath)
+
+func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool
+
+func collectionView(_ collectionView: UICollectionView, shouldDeselectItemAt indexPath: IndexPath) -> Bool 
+
+func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+
+func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath)
+
+func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath)
+
+func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath)
+
+func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath)
+
+func collectionView(_ collectionView: UICollectionView, didEndDisplayingSupplementaryView view: UICollectionReusableView, forElementOfKind elementKind: String, at indexPath: IndexPath)
+
+func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool
+
+func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool
+
+func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?)
+
+func collectionView(_ collectionView: UICollectionView, transitionLayoutForOldLayout fromLayout: UICollectionViewLayout, newLayout toLayout: UICollectionViewLayout) -> UICollectionViewTransitionLayout
+
+func collectionView(_ collectionView: UICollectionView, canFocusItemAt indexPath: IndexPath) -> Bool
+
+func collectionView(_ collectionView: UICollectionView, shouldUpdateFocusIn context: UICollectionViewFocusUpdateContext) -> Bool
+
+func collectionView(_ collectionView: UICollectionView, didUpdateFocusIn context: UICollectionViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator)
+
+func indexPathForPreferredFocusedView(in collectionView: UICollectionView) -> IndexPath?
+
+func collectionView(_ collectionView: UICollectionView, targetIndexPathForMoveFromItemAt originalIndexPath: IndexPath, toProposedIndexPath proposedIndexPath: IndexPath) -> IndexPath
+
+func collectionView(_ collectionView: UICollectionView, targetContentOffsetForProposedContentOffset proposedContentOffset: CGPoint) -> CGPoint 
+
+func collectionView(_ collectionView: UICollectionView, shouldSpringLoadItemAt indexPath: IndexPath, with context: UISpringLoadedInteractionContext) -> Bool
+
+func collectionView(_ collectionView: UICollectionView, shouldBeginMultipleSelectionInteractionAt indexPath: IndexPath) -> Bool
+
+func collectionView(_ collectionView: UICollectionView, didBeginMultipleSelectionInteractionAt indexPath: IndexPath)
+
+func collectionViewDidEndMultipleSelectionInteraction(_ collectionView: UICollectionView)
+
+func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration?
+    
+func collectionView(_ collectionView: UICollectionView, previewForHighlightingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview?
+
+func collectionView(_ collectionView: UICollectionView, previewForDismissingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview?
+
+func collectionView(_ collectionView: UICollectionView, willPerformPreviewActionForMenuWith configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionCommitAnimating)
+
+func collectionView(_ collectionView: UICollectionView, willDisplayContextMenu configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionAnimating?)
+
+func collectionView(_ collectionView: UICollectionView, willEndContextMenuInteraction configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionAnimating?)
+```
+
+
+
 <br/>
 
 <span style="color:#FF6868; font-size: 1.5rem" >DelegateFlowLayout 프로토콜</span>
 
 
-#### 사용해본 것
+
 ```swift
 // cell의 사이즈를 어떻게 할까?
 func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
-```
 
-#### 그외 사용해보지 않은 것
-
-```swift
 //섹션의 inset(margin)을 어떻게 할까?
 func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets
 
