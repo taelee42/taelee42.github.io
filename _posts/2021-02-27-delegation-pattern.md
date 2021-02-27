@@ -5,7 +5,7 @@ date: 2021-02-27 12:11:00 +09:00
 
 ---
 
-Closure가 무엇이고 어떻게 사용하는지 알아보도록 하겠습니다.
+Design pattern 중 iOS 개발시 많이 사용되는 Delegation Pattern에 대해  알아보겠습니다.
 
 <!--more-->
 ---
