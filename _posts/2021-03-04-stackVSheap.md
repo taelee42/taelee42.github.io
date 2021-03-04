@@ -2,7 +2,7 @@
 title: OS | Stack영역과 Heap 영역
 tags: [OS, stack, heap]
 date: 2021-03-04 08:11:00 +09:00
-
+categories: [OS]
 ---
 
 메모리의 Stack 영역과 Heap 영역의 차이점을 알아보겠습니다.

@@ -1,7 +1,8 @@
 ---
-title: Swift | Delegation Pattern
+title: 디자인 패턴 | Delegation Pattern
 tags: [iOS, swift, Design Pattern]
 date: 2021-02-27 12:11:00 +09:00
+categories: [Design Pattern]
 
 ---
 
