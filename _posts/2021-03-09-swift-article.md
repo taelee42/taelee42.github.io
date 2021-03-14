@@ -28,8 +28,11 @@ Swift, 와 RxSwift에 대한 내용을 다룬 깃헙 (읽는 중)
 4. [sungeunDev/iOS-Dev-Career](https://github.com/sungeunDev/iOS-Dev-Career)  
 iOS 면접 질문 모음입니다.
 
-5. [DopplerHQ/awesome-interview-questions](https://github.com/DopplerHQ/awesome-interview-questions#ios)
-모든 개발언어, 주제에 관련된 면접 질문 및 답변 링크 모음입니다.(영어)
+5. [DopplerHQ/awesome-interview-questions(영어)](https://github.com/DopplerHQ/awesome-interview-questions#ios)
+모든 개발언어, 주제에 관련된 면접 질문 및 답변 링크 모음입니다.
+
+6. [Tech Interview Handbook(영어)](https://github.com/yangshun/tech-interview-handbook)
+테크 인터뷰에 관한 전반적인 사항들이 잘 정리되어 있습니다.
 
 ## HIG(Human Interface Guidelines)
 1. [iOS HIG (Officiall)](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
