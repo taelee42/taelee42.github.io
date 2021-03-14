@@ -34,6 +34,10 @@ iOS 면접 질문 모음입니다.
 6. [Tech Interview Handbook(영어)](https://github.com/yangshun/tech-interview-handbook)
 테크 인터뷰에 관한 전반적인 사항들이 잘 정리되어 있습니다.
 
+7. [SuperM](https://hibee.tistory.com/category/CS/Operating%20System)
+컴퓨터 전공 지식을 깔끔하게 잘 정리해놓은 블로그입니다.
+OS 정리글을 찾다가 알게되었습니다.
+
 ## HIG(Human Interface Guidelines)
 1. [iOS HIG (Officiall)](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
 2. [HIG 번역 블로그](https://wnsah052.tistory.com/9)   
