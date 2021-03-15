@@ -22,8 +22,7 @@ url     : https://taelee42.github.io # the base hostname & protocol for your sit
 baseurl : # does not include hostname
 title   : taelee42의iOS
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
-  iOS 블로그
+  taelee42의 개발 블로그입니다. iOS, CS지식을 주로 포스팅 합니다.
 
 
 ## => Language and Timezone
