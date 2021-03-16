@@ -17,26 +17,22 @@ iOS개발자가 되기 위해 공부하면서 들렸었던 사이트들을 한�
 
 1. [스위프트 스터디 깃헙](https://github.com/OhKanghoon/SwiftStudy)  
 Swift, 와 RxSwift에 대한 내용을 다룬 깃헙 (읽는 중)
-
 2. [스위프트 면접 질문들 모음](https://github.com/JeaSungLEE/iOSInterviewquestions)  
 면접 질문이지만 어떻게 iOS를 공부해나갈지 로드맵또한 되는 것같습니다.  
 질문이 아주 많아서 여기만 봐도 괜찮을 것 같습니다. 다만 답변은 스스로 찾아야 합니다.
-
 3. [JaeYeopHan/Interview_Question_for_Beginner](https://github.com/JaeYeopHan/Interview_Question_for_Beginner)  
 개발 전반에 걸친 면접 질문 모음입니다. iOS섹션도 따로 있습니다.
-
 4. [sungeunDev/iOS-Dev-Career](https://github.com/sungeunDev/iOS-Dev-Career)  
 iOS 면접 질문 모음입니다.
-
 5. [DopplerHQ/awesome-interview-questions(영어)](https://github.com/DopplerHQ/awesome-interview-questions#ios)
 모든 개발언어, 주제에 관련된 면접 질문 및 답변 링크 모음입니다.
-
 6. [Tech Interview Handbook(영어)](https://github.com/yangshun/tech-interview-handbook)
 테크 인터뷰에 관한 전반적인 사항들이 잘 정리되어 있습니다.
-
 7. [SuperM](https://hibee.tistory.com/category/CS/Operating%20System)
 컴퓨터 전공 지식을 깔끔하게 잘 정리해놓은 블로그입니다.
 OS 정리글을 찾다가 알게되었습니다.
+8. [92MS](https://91ms.tistory.com/category/%EA%B8%B0%EB%B3%B8%EA%B8%B0/%EA%B8%B0%EC%88%A0%EB%A9%B4%EC%A0%91)  
+면접 주제별로 질문, 답 정리해놓은 블로그
 
 ## HIG(Human Interface Guidelines)
 1. [iOS HIG (Officiall)](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
