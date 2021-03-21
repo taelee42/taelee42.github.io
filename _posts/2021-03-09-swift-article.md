@@ -34,10 +34,22 @@ OS 정리글을 찾다가 알게되었습니다.
 8. [92MS](https://91ms.tistory.com/category/%EA%B8%B0%EB%B3%B8%EA%B8%B0/%EA%B8%B0%EC%88%A0%EB%A9%B4%EC%A0%91)  
 면접 주제별로 질문, 답 정리해놓은 블로그
 
+9.[CSE-Summary](https://github.com/Prev/CSE-Summary)
+
+10.[Tech-Stack](https://github.com/HyeminNoh/Tech-Stack)
+
+
+
+
 ## HIG(Human Interface Guidelines)
 1. [iOS HIG (Officiall)](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
 2. [HIG 번역 블로그](https://wnsah052.tistory.com/9)   
 위 사이트의 번역입니다.
+
+## Swift
+
+1. [Replacing flatMap With compactMap](https://useyourloaf.com/blog/replacing-flatmap-with-compactmap/)  
+flatMap과 compactMap의 차이를 예제로 쉽게 알려준 블로그입니다.
 
 
 ## iOS Animaition
@@ -79,8 +91,6 @@ RxSwift 배우기 전에 한번 읽어보면 좋을 것 같습니다.
 
 ## MarkDown
 
-
-
 1. [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)  
 Markdown 문법을 정리해놓은 깃헙 리포지토리  
 왠만한 문법이 다 있는 것 같다.
@@ -97,5 +107,13 @@ Markdown 문법을 정리해놓은 깃헙 리포지토리
 프로그래머스에서 조사한 개발자 설문조사.  
 연봉 등 재밌는 항목들이 많습니다.
 
+2. [dkhamsing/open-source-ios-apps](https://github.com/dkhamsing/open-source-ios-apps)  오픈 소스 iOS 앱들 모음
 
-2. [dkhamsing/open-source-ios-apps](https://github.com/dkhamsing/open-source-ios-apps)  오픈 소스 iOS 앱들 모음;ㄴ
+3. [Killed by Google](https://killedbygoogle.com/)
+구글이 폐기한 프로젝트 모음
+
+4. [zshell 단축키](https://hjh5488.tistory.com/18)  
+zsh단축키 까먹을때 유용한 사이
+
+5. [zshell 활용방법(외국)](https://opensource.com/article/18/9/tips-productivity-zsh)  
+폴더 이동 관련 명령어가 포함되어 있어서 넣었습니다.
