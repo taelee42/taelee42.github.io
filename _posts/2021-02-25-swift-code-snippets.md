@@ -35,8 +35,7 @@ private func setupCancelButton() {
 >#selector와 @objc는 알아봐야 될듯
 
 
-//색상, 폰트사이즈 설정
-<span style="color:red; font-size: 2rem" >UICollectionViewDataSource</span>
+
 
 
 
@@ -95,4 +94,57 @@ printLocation(location: location)
 
 
 
+
+
+
+# Json parsing할 때 Codable스트럭처 예시
+
+- 파싱해야될 json형태
+```json
+{
+   "resultCount":1,
+   "results":[
+      {
+         "trackId":1485324750,
+         "artistName":"Hayao Miyazaki",
+         "trackName":"My Neighbor Totoro",
+         "previewUrl":"https://video-ssl.itunes.apple.com/itunes-assets/Video113/v4/ee/88/5d/ee885d14-75e4-aa89-d38f-f2aada66c05f/mzvf_8063807238545732413.640x478.h264lc.U.p.m4v",
+         "artworkUrl30":"https://is3-ssl.mzstatic.com/image/thumb/Video123/v4/c9/3e/0b/c93e0ba6-da8d-ec7e-26f3-01da52579766/source/30x30bb.jpg",
+         "artworkUrl60":"https://is3-ssl.mzstatic.com/image/thumb/Video123/v4/c9/3e/0b/c93e0ba6-da8d-ec7e-26f3-01da52579766/source/60x60bb.jpg",
+         "artworkUrl100":"https://is3-ssl.mzstatic.com/image/thumb/Video123/v4/c9/3e/0b/c93e0ba6-da8d-ec7e-26f3-01da52579766/source/100x100bb.jpg"
+      }
+   ]
+}
+```
+
+- 이름을 같게 추출할때는 구조체에 이름과 형식만 선언하면 된다.
+- 이름이 다를 경우 CodingKeys 열거형을 사용해서 추출한다.
+- 오브젝트안에 오브젝트가 있는 경우에는 구조체를 중첩해서 사용한다.
+
+```swift
+struct Response: Codable {
+    let resultCount: Int
+    let movies: [Movie]
+    
+    enum CodingKeys: String, CodingKey {
+        case resultCount
+        case movies = "results"
+    }
+}
+
+struct Movie: Codable {
+    let title: String
+    let director: String
+    let thumbnailPath: String
+    let previewURL: String
+    
+    enum CodingKeys: String, CodingKey {
+        case title = "trackName"
+        case director = "artistName"
+        case thumbnailPath = "artworkUrl100"
+        case previewURL = "previewUrl"
+    }
+}
+
+```
 
