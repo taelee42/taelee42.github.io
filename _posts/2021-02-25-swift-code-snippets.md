@@ -201,3 +201,14 @@ class WeatherDataSource {
 ```
 이렇게 사용한다
 생성자가 외부에서 실행되지 않도로고 private으로 선언해줘야한다.
+
+
+
+
+
+# 특정 뷰에 이미지 넣기
+
+```swift
+cell.weatherImageView.image = UIImage(named: weather.icon)
+```
+
