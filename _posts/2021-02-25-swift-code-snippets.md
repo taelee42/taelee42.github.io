@@ -148,3 +148,46 @@ struct Movie: Codable {
 
 ```
 
+# Dispatch Group 사용 예시
+```swift
+    let apiQueue = DispatchQueue(label: "ApiQueue", attributes: .concurrent)
+    
+    let group = DispatchGroup()
+    
+    func fetch(location: CLLocation, completion: @escaping () -> ()) {
+        group.enter()
+        apiQueue.async {
+            self.fetchCurrentWeather(location: location) { (result) in
+                switch result {
+                case .success(let data):
+                    self.summary = data
+                default:
+                    self.summary = nil
+                }
+                self.group.leave()
+            }
+        }
+        
+        group.enter()
+        apiQueue.async {
+            self.fetchForecast(location: location) { (result) in
+                switch result {
+                case .success(let data):
+                    self.forecast = data
+                default:
+                    self.forecast = nil
+                }
+                self.group.leave()
+            }
+        }
+        group.notify(queue: .main) {
+            completion()
+        }
+    }
+```
+
+queue를 만들고 Dispath Group으로 그 큐들을 다루는 논리적인 그룹을 만들었다.
+queue별로 group.enter()로 그룹에 진입하고
+`self.group.leave()`로 빠져나온다.
+모두 빠져나오면 `group.notify(queue: .main)`으로 실행할 코드를 작성한다.
+여기에서 두가지 인자 queue와 closure를 받는데 큐에서 해당 클로져가 실행되는 코드이다.
