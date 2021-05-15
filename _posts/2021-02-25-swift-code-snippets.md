@@ -191,3 +191,13 @@ queue별로 group.enter()로 그룹에 진입하고
 `self.group.leave()`로 빠져나온다.
 모두 빠져나오면 `group.notify(queue: .main)`으로 실행할 코드를 작성한다.
 여기에서 두가지 인자 queue와 closure를 받는데 큐에서 해당 클로져가 실행되는 코드이다.
+
+# Singleton Pattern
+```swift
+class WeatherDataSource {
+    static let shared = WeatherDataSource()
+    private init() {}
+}
+```
+이렇게 사용한다
+생성자가 외부에서 실행되지 않도로고 private으로 선언해줘야한다.
