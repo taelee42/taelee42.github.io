@@ -1,0 +1,98 @@
+---
+title: Swift | Code Snippets
+tags: [iOS, swift, closure]
+date: 2021-05-15 15:22:00 +09:00
+
+---
+
+스위프트를 공부하면서 수집한 코드 조각들입니다.
+
+<!--more-->
+---
+
+
+
+
+
+# 뒤로가기 버튼을 다른 모양의 버튼으로 만들고 뒤로가기 기능을 추가해주는 코드
+  - DesignPatternByTutorials -> 04 Delegation Pattern
+```swift
+public override func viewDidLoad() {
+    super.viewDidLoad()
+    setupCancelButton()
+}
+private func setupCancelButton() {
+    let action = #selector(handleCancelPressed(sender:))
+    let image = UIImage(named: "ic_menu")
+    navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, landscapeImagePhone: nil, style: .plain, target: self, action: action)
+}
+
+@objc private func handleCancelPressed(sender: UIBarButtonItem) {
+    delegate?.questionViewController(self, didCancel: questionGroup, at: questionIndex)
+  }
+```
+
+>#selector와 @objc는 알아봐야 될듯
+
+
+//색상, 폰트사이즈 설정
+<span style="color:red; font-size: 2rem" >UICollectionViewDataSource</span>
+
+
+
+
+
+
+# 특정 셀 선택되었을 때 이거는 여기가 아니라 collectionView protocol로 가야할 듯
+```swift
+extension PlayViewController: UICollectionViewDelegate {
+    //클릭했을 때 동작
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    }
+}
+```
+
+
+# awakenib
+
+```swift
+override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+```
+
+# 터치된 부분의 좌표를 알려주는 코드
+```swift
+//viewController.swift
+override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    if let touch = touches.first {
+        let location = touch.location(in: self.view)
+        print(location)
+    }
+
+}
+```
+
+# 오토 레이아웃 코드로 promatically하게 짜기
+```swift
+completeMenu.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+```
+
+
+
+# 위도 경도 처리하는 코드
+```swift
+import CoreLocation
+
+let location = CLLocation(latitude: 37.498206, longitude: 127.02761)
+func printLocation(location: CLLocation) {
+    print(location.coordinate.latitude)
+    print(location.coordinate.longitude)
+}
+printLocation(location: location)
+```
+
+
+
+
+
