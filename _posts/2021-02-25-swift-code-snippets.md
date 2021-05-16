@@ -15,7 +15,9 @@ date: 2021-05-15 15:22:00 +09:00
 
 
 # 뒤로가기 버튼을 다른 모양의 버튼으로 만들고 뒤로가기 기능을 추가해주는 코드
+
   - DesignPatternByTutorials -> 04 Delegation Pattern
+
 ```swift
 public override func viewDidLoad() {
     super.viewDidLoad()
@@ -203,12 +205,26 @@ class WeatherDataSource {
 생성자가 외부에서 실행되지 않도로고 private으로 선언해줘야한다.
 
 
-
-
-
 # 특정 뷰에 이미지 넣기
 
 ```swift
 cell.weatherImageView.image = UIImage(named: weather.icon)
+```
+
+# 온도 data formatter
+```swift
+//Double+Formatter.swift
+fileprivate let temperatureFormatter: MeasurementFormatter = {
+    let f = MeasurementFormatter()
+    f.locale = Locale(identifier: "ko_kr")  //로케일 변경
+    f.numberFormatter.maximumFractionDigits = 1 // 소숫점이 최대 1자리까지만, 0이면 안보이게함
+    f.unitOptions = .temperatureWithoutUnit // 섭씨나 화씨기호가 안보이게, ° 이거는 보임
+    return f
+}()
+
+extension Double { //더블에 확장해서 .으로 쉽게 사용하게 만듬
+    var temperatureString: String {
+        let temp = Measurement<UnitTemperature>(value: self, unit: .celsius) //위의 MesurementFormatter()이기 때문에 Mesurement형식으로 만들어줘야 하는것 같다.
+        return temperatureFormatter.string(from: temp)
 ```
 
