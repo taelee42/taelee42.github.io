@@ -228,3 +228,30 @@ extension Double { //더블에 확장해서 .으로 쉽게 사용하게 만듬
         return temperatureFormatter.string(from: temp)
 ```
 
+# 코드로 계산한뒤에 inset바꾸기
+
+
+```swift
+    var topInset = CGFloat(0.0)
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if topInset == 0.0 {
+            let firstIndexPath = IndexPath(row: 0, section: 0)
+            if let cell = listTableView.cellForRow(at: firstIndexPath) {
+                topInset = listTableView.frame.height - cell.frame.height
+                
+                var inset = listTableView.contentInset
+                inset.top = topInset
+                listTableView.contentInset = inset
+            }
+        }
+    }
+```
+
+# 현재 실행되는 부분이 메인쓰레드인지 확인하는 코드
+
+```swift
+print(Thread.isMainThread ? "Main Thread": "Background Thread")
+```
